@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>المفقودات والموجودات – نظام الطلبة الجامعي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--card:#f5f7fb;--tx:#14213d;--mu:#5a6785;--bd:#dde3ef;--p1:#e3e9f6;--p2:#f4ecd3;--bl:#1b3a7a;--lk:#1b3a7a;--g1:#1b3a7a;--g2:#12306b;--g3:#0b1f4a;--h0:#3a5db0;--gr:#2e9d6a;--or:#d4a62a;--te:#3b82c4;--rd:#d64545;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--card:#131313;--tx:#f2f2f2;--mu:#a3a3a3;--bd:#2a2a2a;--p1:#1a2a55;--p2:#3a3016;--bl:#3b63c4;--lk:#9db9f5}}
+:root[data-theme="dark"]{--bg:#000;--card:#131313;--tx:#f2f2f2;--mu:#a3a3a3;--bd:#2a2a2a;--p1:#1a2a55;--p2:#3a3016;--bl:#3b63c4;--lk:#9db9f5}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.7}
+header{background:linear-gradient(270deg,var(--g1),var(--g2) 50%,var(--g3));border-bottom:3px solid var(--or);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.wrap{max-width:1150px;margin:auto;padding:0 16px}
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0}
+.logo{font-weight:800;font-size:1.15rem;cursor:pointer;display:flex;gap:8px;align-items:center}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-inline-start:auto}
+nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:8px;font-size:.92rem;cursor:pointer}
+nav a:hover,nav a.on{background:rgba(212,166,42,.35)}
+main{padding:22px 0 50px}
+h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.2rem;margin:0 0 12px}
+.mu{color:var(--mu);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:20px}
+.stat{border-radius:14px;padding:16px;background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--bl)}.stat b{font-size:1.9rem;display:block}
+.s1{border-top-color:var(--bl)}.s1 b{color:var(--lk)}.s2{border-top-color:var(--or)}.s2 b{color:var(--or)}.s3{border-top-color:var(--gr)}.s3 b{color:var(--gr)}.s4{border-top-color:var(--te)}.s4 b{color:var(--te)}
+.hero{background:linear-gradient(270deg,var(--h0),var(--g1) 50%,var(--g3));color:#fff;border-radius:22px;padding:34px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}.hero p{margin:0 0 18px;max-width:560px}.hi{font-size:5rem;letter-spacing:12px}
+.hero h1{font-size:2rem;margin:0 0 10px}.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:28px}.step{position:relative}.step .n{position:absolute;top:14px;inset-inline-start:16px;width:30px;height:30px;border-radius:50%;background:var(--or);color:#1a1a2e;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}.step b{display:block;font-size:1.15rem;margin-top:34px}@media(max-width:700px){.hi{display:none}}
+.btn{background:var(--bl);color:#fff;border:0;border-radius:10px;padding:9px 18px;font:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.o{background:var(--or);color:#1a1a2e}.btn.g{background:var(--gr);color:#fff}.btn.t{background:var(--te)}.btn.r{background:var(--rd)}.btn.l{background:transparent;color:var(--lk);border:1px solid var(--lk)}
+.btn.sm{padding:3px 10px;font-size:.85rem}
+label{display:block;font-weight:600;margin:10px 0 4px;font-size:.92rem}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font:inherit}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.item{overflow:hidden;padding:0;cursor:pointer;transition:.15s}.item:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.item .ph{height:140px;background:linear-gradient(135deg,var(--p1),var(--p2));display:flex;align-items:center;justify-content:center;font-size:3rem}
+.item img{width:100%;height:140px;object-fit:cover}.item .bd{padding:12px 14px}
+.badge{display:inline-block;padding:1px 10px;border-radius:20px;font-size:.78rem;color:#fff}
+.b-o{background:var(--or);color:#1a1a2e}.b-t{background:var(--te)}.b-g{background:var(--gr)}.b-b{background:var(--bl)}.b-r{background:var(--rd)}
+.tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:right;white-space:nowrap}th{background:var(--bg)}
+.bars div{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:.88rem}.bars i{display:block;height:12px;border-radius:6px;background:var(--te)}
+.det{display:grid;gap:20px;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.det img,.det .ph{width:100%;max-height:340px;object-fit:cover;border-radius:12px}.det .ph{height:260px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:5rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:20;padding:16px}
+.modal .card{max-width:440px;width:100%}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));inset-inline-start:20px;background:var(--gr);color:#fff;padding:10px 18px;border-radius:10px;z-index:30}
+.po{display:none}
+@media(max-width:700px){.det{grid-template-columns:1fr}.hero h1{font-size:1.5rem}}
+@media print{:root{--bg:#fff!important;--card:#fff!important;--tx:#000!important;--mu:#444!important;--bd:#ccc!important}header,.np,.toast{display:none!important}.po{display:block}body{background:#fff;color:#000}.card{border:0}th,td{white-space:normal}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar"><div class="logo" onclick="go('home')"><span style="font-size:2rem">🎓</span><div>المفقودات والموجودات<div style="font-size:.72rem;font-weight:400">نظام مفقودات الطلبة الجامعي · إشراف الأستاذ أيوب كتاب</div></div></div><nav id="nav"></nav></div></header>
+<main class="wrap" id="app"></main>
+<script>
+const CATS=['بطاقات هوية','إلكترونيات','كتب ودفاتر','مفاتيح','ملابس وحقائب','محافظ ومال','أخرى'];
+const CI=['🪪','💻','📚','🔑','🎒','👛','📦'];
+const ST={lost:['مفقود','b-o'],found:['تم العثور عليه','b-t'],returned:['تم التسليم','b-g']};
+const RV={pending:['قيد المراجعة','b-o'],approved:['معتمد','b-g'],rejected:['مرفوض','b-r']};
+const today=()=>new Date().toISOString().slice(0,10);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=s=>document.querySelector(s);
+let DB,mem=null,S={user:null,cur:null,f:{q:'',cat:'',from:'',to:'',kind:''},rep:{kind:'lost',from:'',to:''},auth:'login'};
+async function sha(t){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('lf::'+t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return 'p:'+btoa(unescape(encodeURIComponent(t)))}}
+function save(){try{localStorage.setItem('lf_db2',JSON.stringify(DB));localStorage.setItem('lf_ses',S.user||'')}catch(e){mem=DB}}
+function load(){try{DB=JSON.parse(localStorage.getItem('lf_db2'));S.user=localStorage.getItem('lf_ses')||null}catch(e){DB=mem}}
+const uid=()=>Math.random().toString(36).slice(2,9);
+async function init(){applyPref();load();
+ if(!DB){DB={users:[{id:'admin',name:'مدير النظام',uni:'ADMIN',pass:await sha('Admin@123'),role:'admin'}],items:[],reqs:[]};
+  const sd=[['lost','بطاقة جامعية','0','وجدت بجانب مكتبة الكلية، باللون الأزرق','المكتبة المركزية','UNI-20931'],['found','حاسوب محمول','1','حاسوب رمادي مع حقيبة سوداء','مدرج 3 – كلية الهندسة','SN-77120'],['lost','كتاب الفيزياء العامة','2','كتاب مكتوب عليه الاسم في الصفحة الأولى','قاعة المحاضرات B','—'],['found','مفتاح سيارة','3','مفتاح مع علاقة على شكل كرة','موقف السيارات','K-204']];
+  [].forEach((x,i)=>DB.items.push({id:uid(),type:x[0],name:x[1],cat:+x[2],desc:x[3],loc:x[4],idno:x[5],date:today(),img:'',status:x[0],rev:'approved',owner:'admin',ho:null}));save()}
+ window.onhashchange=r;r()}
+function go(h){location.hash=h;}
+const me=()=>DB.users.find(u=>u.id===S.user);
+const isAd=()=>me()&&me().role==='admin';
+function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),2200)}
+function nav(rt){const L=[['home','🏠 الرئيسية'],['browse','🔎 تصفح المفقودات'],['lost','➕ إبلاغ عن مفقود'],['found','✅ إبلاغ عن موجود']];
+ if(me()&&!isAd())L.push(['mine','👤 حسابي']);
+ if(isAd())L.push(['dash','📊 لوحة الإدارة'],['manage','🗂️ إدارة البلاغات'],['requests','📥 طلبات الاستلام'],['reports','📄 التقارير'],['users','👥 المستخدمون']);
+ $('#nav').innerHTML=L.map(l=>`<a class="${rt===l[0]?'on':''}" onclick="go('${l[0]}')">${l[1]}</a>`).join('')+`<a id="tg" onclick="tgl()" title="تبديل الوضع الفاتح والداكن" style="font-size:1.15rem">${isDk()?'☀️':'🌙'}</a>`+(me()?`<a onclick="logout()">🚪 خروج (${esc(me().name.split(' ')[0])})</a>`:`<a onclick="go('auth')">🔐 دخول / تسجيل</a>`)}
+function logout(){S.user=null;save();go('home');r()}
+function r(){let rt=location.hash.slice(1)||'home';
+ const adm=['dash','manage','requests','reports','users'],stu=['lost','found','mine','request'];
+ if(adm.includes(rt)&&!isAd())rt=me()?'home':'auth';
+ if(stu.includes(rt)&&!me())rt='auth';
+ nav(rt);$('#app').innerHTML=(V[rt]||V.home)();window.scrollTo(0,0);if(rt==='browse')res()}
+const badge=(m,k)=>`<span class="badge ${m[k][1]}">${m[k][0]}</span>`;
+function card(i){return `<div class="card item" onclick="S.cur='${i.id}';go('item')">${i.img?`<img src="${i.img}" alt="">`:`<div class="ph">${CI[i.cat]}</div>`}<div class="bd">${badge(ST,i.status)} <b>${esc(i.name)}</b><div class="mu">📍 ${esc(i.loc)}<br>📅 ${i.date} · ${CATS[i.cat]}</div></div></div>`}
+const V={
+home(){const A=DB.items.filter(i=>i.rev==='approved');
+ return `<div class="hero"><div class="hl"><h1>هل فقدت شيئاً داخل الجامعة؟</h1><p>منصة موحّدة لطلبة الجامعة للإبلاغ عن المفقودات والموجودات، والبحث عنها وطلب استردادها بسهولة وأمان.</p>
+ <button class="btn o" onclick="go('${me()?'lost':'auth'}')">أبلغ عن مفقود</button> <button class="btn t" onclick="go('${me()?'found':'auth'}')">وجدت شيئاً</button></div><div class="hi">🎒🔍</div></div>
+ <div class="stats"><div class="stat s2"><b>${A.filter(i=>i.status==='lost').length}</b>مفقود</div><div class="stat s4"><b>${A.filter(i=>i.status==='found').length}</b>موجود</div><div class="stat s3"><b>${A.filter(i=>i.status==='returned').length}</b>تم تسليمه</div><div class="stat s1"><b>${A.length}</b>إجمالي البلاغات</div></div><div class="steps">${[['سجّل بياناتك','أنشئ ملفك كطالب مرة واحدة'],['أبلغ أو ابحث','أضف بلاغاً أو ابحث بالفلاتر'],['قدّم طلب استرداد','أرفق ما يثبت ملكيتك'],['استلم غرضك','تعتمد الإدارة التسليم وتوثقه']].map((s,k)=>`<div class="card step"><span class="n">${k+1}</span><b>${s[0]}</b><span class="mu">${s[1]}</span></div>`).join('')}</div>
+ <h2>أحدث البلاغات</h2>${A.length?`<div class="grid">${A.slice(-6).reverse().map(card).join('')}</div>`:`<div class="card" style="text-align:center;padding:50px 0"><div style="font-size:3.5rem">📪</div><p class="mu">لا توجد بلاغات معتمدة بعد.</p></div>`}`},
+auth(){const l=S.auth==='login';
+ return `<div class="card" style="max-width:440px;margin:auto"><h2>${l?'تسجيل دخول الطالب':'تسجيل طالب جديد'}</h2>
+ <form onsubmit="doAuth(event)">${l?'':`<label>الاسم الكامل</label><input id="n" required minlength="3">`}
+ <label>الرقم الجامعي أو البريد الجامعي</label><input id="u" required minlength="3" pattern="[A-Za-z0-9._@\\-]+" title="أحرف إنجليزية وأرقام والرموز . _ @ - فقط"><label>كلمة المرور</label><div style="position:relative"><input id="p" type="password" required minlength="6" style="padding-inline-end:44px"><button type="button" aria-label="إظهار أو إخفاء كلمة المرور" onclick="const p=$('#p');p.type=p.type==='password'?'text':'password';this.textContent=p.type==='password'?'👁️':'🙈'" style="position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);background:none;border:0;cursor:pointer;font-size:1.2rem">👁️</button></div>
+ <p class="mu" id="er" style="color:var(--rd)"></p><button class="btn" style="width:100%">${l?'دخول':'إنشاء الحساب'}</button></form>
+ <p class="mu" style="text-align:center"><a href="#auth" onclick="S.auth='${l?'reg':'login'}';r();return false">${l?'ليس لديك حساب؟ سجّل الآن':'لديك حساب؟ سجّل الدخول'}</a></p>
+ <p class="mu">حساب المدير التجريبي: admin / Admin@123</p></div>`},
+lost(){return form('lost')},found(){return form('found')},
+browse(){const f=S.f;return `<h1>تصفح المفقودات والموجودات</h1><div class="card np" style="margin:14px 0"><div class="row">
+ <div><label>اسم المادة</label><input value="${esc(f.q)}" oninput="S.f.q=this.value;res()"></div>
+ <div><label>التصنيف</label><select onchange="S.f.cat=this.value;res()"><option value="">الكل</option>${CATS.map((c,i)=>`<option value="${i}" ${f.cat==i&&f.cat!==''?'selected':''}>${c}</option>`).join('')}</select></div>
+ <div><label>النوع</label><select onchange="S.f.kind=this.value;res()">${[['','الكل'],['lost','مفقودات'],['found','موجودات'],['returned','تم تسليمها']].map(k=>`<option value="${k[0]}" ${f.kind===k[0]?'selected':''}>${k[1]}</option>`).join('')}</select></div>
+ <div><label>من تاريخ</label><input type="date" value="${f.from}" onchange="S.f.from=this.value;res()"></div>
+ <div><label>إلى تاريخ</label><input type="date" value="${f.to}" onchange="S.f.to=this.value;res()"></div></div></div><div class="grid" id="res"></div>`},
+item(){const i=DB.items.find(x=>x.id===S.cur);if(!i)return V.browse();const u=DB.users.find(x=>x.id===i.owner);
+ return `<div class="card det">${i.img?`<img src="${i.img}" alt="">`:`<div class="ph">${CI[i.cat]}</div>`}<div><h1>${esc(i.name)}</h1>${badge(ST,i.status)} <span class="badge b-b">${CATS[i.cat]}</span>
+ <p>${esc(i.desc)}</p><p>📍 <b>المكان:</b> ${esc(i.loc)}<br>📅 <b>التاريخ:</b> ${i.date}<br>🔖 <b>رقم/معرّف:</b> ${esc(i.idno||'—')}<br>👤 <b>المُبلِّغ:</b> ${esc(u?u.name:'—')}</p>
+ ${i.ho?`<div class="card" style="background:var(--bg)"><b>✅ تفاصيل التسليم</b><br>التاريخ: ${i.ho.date}<br>المستلم: ${esc(i.ho.who)}<br>${esc(i.ho.note)}</div>`:''}
+ ${i.status!=='returned'?`<button class="btn o" onclick="go('${me()?'request':'auth'}')">${i.status==='lost'?'لقد وجدته – تواصل':'هذا ملكي – طلب استلام'}</button>`:''} <button class="btn l" onclick="go('browse')">رجوع</button></div></div>`},
+request(){const i=DB.items.find(x=>x.id===S.cur);if(!i)return V.browse();
+ return `<div class="card" style="max-width:560px;margin:auto"><h2>طلب استلام: ${esc(i.name)}</h2><form onsubmit="sendReq(event)">
+ <label>وصف يثبت ملكيتك (علامات مميزة، محتويات…)</label><textarea id="d" rows="4" required minlength="10"></textarea>
+ <label>رقم الهاتف للتواصل</label><input id="ph" required pattern="[0-9+ ]{8,15}" title="رقم هاتف صحيح"><br><br><button class="btn g">إرسال الطلب</button></form></div>`},
+mine(){const R=DB.reqs.filter(x=>x.user===S.user),B=DB.items.filter(i=>i.owner===S.user);
+ return `<h1>طلباتي وبلاغاتي</h1><h2>بلاغاتي</h2><div class="card tbl"><table><tr><th>المادة</th><th>النوع</th><th>المراجعة</th><th>الحالة</th></tr>${B.map(i=>`<tr><td>${esc(i.name)}</td><td>${i.type==='lost'?'فقدان':'عثور'}</td><td>${badge(RV,i.rev)}</td><td>${badge(ST,i.status)}</td></tr>`).join('')||'<tr><td colspan=4>لا توجد بلاغات</td></tr>'}</table></div>
+ <h2 style="margin-top:20px">طلبات الاستلام</h2><div class="card tbl"><table><tr><th>المادة</th><th>التاريخ</th><th>الحالة</th></tr>${R.map(x=>{const i=DB.items.find(y=>y.id===x.item);return `<tr><td>${esc(i?i.name:'—')}</td><td>${x.date}</td><td>${badge(RV,x.st)}</td></tr>`}).join('')||'<tr><td colspan=3>لا توجد طلبات</td></tr>'}</table></div>`},
+dash(){const I=DB.items,c=k=>I.filter(i=>i.status===k&&i.rev==='approved').length,mx=Math.max(1,...CATS.map((_,k)=>I.filter(i=>i.cat===k).length));
+ return `<h1>لوحة تحكم المدير</h1><div class="stats" style="margin-top:14px"><div class="stat s1"><b>${I.length}</b>كل البلاغات</div><div class="stat s2"><b>${I.filter(i=>i.rev==='pending').length}</b>بانتظار المراجعة</div><div class="stat s4"><b>${DB.reqs.filter(x=>x.st==='pending').length}</b>طلبات استلام معلّقة</div><div class="stat s3"><b>${c('returned')}</b>تم تسليمها</div></div>
+ <div class="row"><div class="card"><h2>التوزيع حسب التصنيف</h2><div class="bars">${CATS.map((n,k)=>{const v=I.filter(i=>i.cat===k).length;return `<div><span style="width:95px">${n}</span><i style="width:${v/mx*55}%"></i>${v}</div>`}).join('')}</div></div>
+ <div class="card"><h2>ملخص الحالات</h2><p>${badge(ST,'lost')} ${c('lost')}</p><p>${badge(ST,'found')} ${c('found')}</p><p>${badge(ST,'returned')} ${c('returned')}</p><p class="mu">الطلاب المسجلون: ${DB.users.filter(u=>u.role!=='admin').length}</p></div></div>`},
+manage(){return `<h1>إدارة البلاغات</h1><div class="card tbl" style="margin-top:14px"><table><tr><th>المادة</th><th>النوع</th><th>التاريخ</th><th>المراجعة</th><th>الحالة</th><th>إجراءات</th></tr>${DB.items.map(i=>`<tr><td><a href="#item" onclick="S.cur='${i.id}'">${esc(i.name)}</a></td><td>${i.type==='lost'?'فقدان':'عثور'}</td><td>${i.date}</td><td>${badge(RV,i.rev)}</td>
+ <td><select onchange="setSt('${i.id}',this.value)">${Object.keys(ST).map(k=>`<option value="${k}" ${i.status===k?'selected':''}>${ST[k][0]}</option>`).join('')}</select></td>
+ <td>${i.rev!=='approved'?`<button class="btn g sm" onclick="rev('${i.id}','approved')">اعتماد</button> `:''}${i.rev==='pending'?`<button class="btn o sm" onclick="rev('${i.id}','rejected')">رفض</button> `:''}<button class="btn r sm" onclick="del('${i.id}')">حذف</button></td></tr>`).join('')}</table></div>`},
+requests(){return `<h1>طلبات الاستلام</h1><div class="card tbl" style="margin-top:14px"><table><tr><th>المادة</th><th>الطالب</th><th>الوصف</th><th>الهاتف</th><th>الحالة</th><th>إجراءات</th></tr>${DB.reqs.map(x=>{const i=DB.items.find(y=>y.id===x.item),u=DB.users.find(y=>y.id===x.user);return `<tr><td>${esc(i?i.name:'—')}</td><td>${esc(u?u.name:'—')}</td><td style="white-space:normal;min-width:200px">${esc(x.d)}</td><td>${esc(x.ph)}</td><td>${badge(RV,x.st)}</td><td>${x.st==='pending'?`<button class="btn g sm" onclick="hoModal('${x.id}')">موافقة وتسليم</button> <button class="btn r sm" onclick="rejReq('${x.id}')">رفض</button>`:'—'}</td></tr>`}).join('')||'<tr><td colspan=6>لا توجد طلبات</td></tr>'}</table></div>`},
+users(){return `<h1>إدارة المستخدمين</h1><p class="mu">عيّن أي مستخدم مديراً أو أعده طالباً.</p><div class="card tbl" style="margin-top:14px"><table><tr><th>الاسم</th><th>اسم المستخدم</th><th>الدور</th><th>إجراء</th></tr>${DB.users.map(u=>`<tr><td>${esc(u.name)}</td><td dir="ltr" style="text-align:right">${esc(u.id)}</td><td><span class="badge ${u.role==='admin'?'b-o':'b-b'}">${u.role==='admin'?'مدير':'طالب'}</span></td><td>${u.id===S.user||u.id==='admin'?'<span class="mu">—</span>':u.role==='admin'?`<button class="btn r sm" onclick="setRole('${u.id}','student')">إلغاء الإدارة</button>`:`<button class="btn g sm" onclick="setRole('${u.id}','admin')">تعيين كمدير</button>`}</td></tr>`).join('')}</table></div>`},
+reports(){const p=S.rep,L=repRows();
+ return `<h1 class="np">التقارير والتصدير</h1><div class="card np" style="margin:14px 0"><div class="row"><div><label>نوع التقرير</label><select onchange="S.rep.kind=this.value;r()">${[['lost','المفقودات'],['found','الموجودات'],['returned','المواد المسلّمة'],['all','الجرد الشامل']].map(k=>`<option value="${k[0]}" ${p.kind===k[0]?'selected':''}>${k[1]}</option>`).join('')}</select></div><div><label>من</label><input type="date" value="${p.from}" onchange="S.rep.from=this.value;r()"></div><div><label>إلى</label><input type="date" value="${p.to}" onchange="S.rep.to=this.value;r()"></div></div><br><button class="btn t" onclick="window.print()">📄 تصدير PDF / طباعة</button> <span class="mu">اختر «حفظ بصيغة PDF» من نافذة الطباعة</span></div>
+ <div class="card"><div class="po" style="text-align:center"><h2>الجامعة – نظام المفقودات والموجودات</h2></div><h2>تقرير: ${{lost:'المفقودات',found:'الموجودات',returned:'المواد المسلّمة',all:'الجرد الشامل'}[p.kind]} (${L.length}) – ${today()}</h2>
+ <div class="tbl"><table><tr><th>#</th><th>المادة</th><th>التصنيف</th><th>المكان</th><th>التاريخ</th><th>الرقم</th><th>الحالة</th><th>التسليم</th></tr>${L.map((i,k)=>`<tr><td>${k+1}</td><td>${esc(i.name)}</td><td>${CATS[i.cat]}</td><td>${esc(i.loc)}</td><td>${i.date}</td><td>${esc(i.idno)}</td><td>${ST[i.status][0]}</td><td>${i.ho?i.ho.date+' – '+esc(i.ho.who):'—'}</td></tr>`).join('')||'<tr><td colspan=8>لا توجد بيانات</td></tr>'}</table></div><p class="mu">إشراف: الأستاذ أيوب كتاب</p></div>`}
+};
+function setRole(id,role){if(!isAd())return;const u=DB.users.find(x=>x.id===id);if(!u)return;if(!confirm(role==='admin'?'تعيين '+u.name+' كمدير؟ ستكون له كل صلاحيات الإدارة.':'إلغاء صلاحيات الإدارة عن '+u.name+'؟'))return;u.role=role;save();toast('تم تحديث الدور');r()}
+
+function applyPref(){let t='';try{t=localStorage.getItem('lf_theme')||''}catch(e){t=window._th||''}window._th=t;const h=document.documentElement;if(t)h.setAttribute('data-theme',t);else h.removeAttribute('data-theme')}
+function isDk(){const t=document.documentElement.getAttribute('data-theme');return t?t==='dark':!!(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)}
+function tgl(){const t=isDk()?'light':'dark';window._th=t;try{localStorage.setItem('lf_theme',t)}catch(e){}applyPref();const b=document.getElementById('tg');if(b)b.textContent=isDk()?'☀️':'🌙'}
+
+
+
+
+function repRows(){const p=S.rep;return DB.items.filter(i=>i.rev==='approved'&&(p.kind==='all'||i.status===p.kind)&&(!p.from||i.date>=p.from)&&(!p.to||i.date<=p.to))}
+function res(){const f=S.f,q=f.q.trim().toLowerCase(),L=DB.items.filter(i=>i.rev==='approved'&&(!q||i.name.toLowerCase().includes(q))&&(f.cat===''||i.cat==f.cat)&&(!f.kind||i.status===f.kind)&&(!f.from||i.date>=f.from)&&(!f.to||i.date<=f.to));
+ const e=$('#res');if(e)e.innerHTML=L.map(card).join('')||'<p class="mu">لا توجد نتائج مطابقة</p>'}
+function form(t){const L=t==='lost';return `<div class="card" style="max-width:640px;margin:auto"><h2>${L?'🔎 بلاغ عن مفقود':'🎁 بلاغ عن عثور على مادة'}</h2><form onsubmit="addItem(event,'${t}')">
+ <label>اسم المادة</label><input id="n" required minlength="2"><div class="row"><div><label>التصنيف</label><select id="c">${CATS.map((c,i)=>`<option value="${i}">${c}</option>`).join('')}</select></div><div><label>${L?'تاريخ الفقدان':'تاريخ العثور'}</label><input id="d" type="date" max="${today()}" value="${today()}" required></div></div>
+ <label>${L?'مكان الفقدان':'مكان العثور'}</label><input id="l" required><label>الوصف التفصيلي</label><textarea id="ds" rows="3" required minlength="10"></textarea>
+ <label>رقم تعريفي / رقم الجهاز (اختياري)</label><input id="id"><label>صورة المادة (اختياري)</label><input id="im" type="file" accept="image/*"><br><br><button class="btn ${L?'o':'g'}">إرسال البلاغ</button></form></div>`}
+async function doAuth(e){e.preventDefault();const u=$('#u').value.trim().toLowerCase(),p=await sha($('#p').value),er=$('#er');
+ if(S.auth==='login'){const x=DB.users.find(y=>y.id===u&&y.pass===p);if(!x){er.textContent='بيانات الدخول غير صحيحة';return}S.user=x.id;save();go(x.role==='admin'?'dash':'home');r()}
+ else{if(DB.users.some(y=>y.id===u)){er.textContent='اسم المستخدم مسجل مسبقاً';return}DB.users.push({id:u,name:$('#n').value.trim(),uni:u,pass:p,role:'student'});S.user=u;save();toast('تم إنشاء الحساب');go('home');r()}}
+function shrink(file){return new Promise(ok=>{if(!file)return ok('');const fr=new FileReader();fr.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,600/im.width),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);ok(c.toDataURL('image/jpeg',.7))};im.onerror=()=>ok('');im.src=fr.result};fr.readAsDataURL(file)})}
+async function addItem(e,t){e.preventDefault();const img=await shrink($('#im').files[0]);
+ DB.items.push({id:uid(),type:t,name:$('#n').value.trim(),cat:+$('#c').value,desc:$('#ds').value.trim(),loc:$('#l').value.trim(),idno:$('#id').value.trim()||'—',date:$('#d').value,img,status:t,rev:'pending',owner:S.user,ho:null});save();toast('تم إرسال البلاغ للمراجعة');go('mine')}
+function sendReq(e){e.preventDefault();DB.reqs.push({id:uid(),item:S.cur,user:S.user,d:$('#d').value.trim(),ph:$('#ph').value.trim(),st:'pending',date:today()});save();toast('تم إرسال طلبك');go('mine')}
+function setSt(id,v){DB.items.find(i=>i.id===id).status=v;save();toast('تم تحديث الحالة')}
+function rev(id,v){DB.items.find(i=>i.id===id).rev=v;save();r()}
+function del(id){if(!confirm('حذف هذا البلاغ نهائياً؟'))return;DB.items=DB.items.filter(i=>i.id!==id);DB.reqs=DB.reqs.filter(x=>x.item!==id);save();r()}
+function rejReq(id){DB.reqs.find(x=>x.id===id).st='rejected';save();r()}
+function hoModal(id){const m=document.createElement('div');m.className='modal';m.innerHTML=`<div class="card"><h2>توثيق التسليم</h2><form id="hf"><label>اسم المستلم</label><input id="hw" required><label>تاريخ التسليم</label><input id="hd" type="date" value="${today()}" required><label>تفاصيل / ملاحظات</label><textarea id="hn" rows="3" required></textarea><br><button class="btn g">تأكيد التسليم</button> <button type="button" class="btn l" id="hc">إلغاء</button></form></div>`;document.body.append(m);
+ $('#hc').onclick=()=>m.remove();$('#hf').onsubmit=ev=>{ev.preventDefault();const x=DB.reqs.find(y=>y.id===id),i=DB.items.find(y=>y.id===x.item);x.st='approved';i.status='returned';i.ho={date:$('#hd').value,who:$('#hw').value.trim(),note:$('#hn').value.trim()};DB.reqs.filter(y=>y.item===i.id&&y.st==='pending').forEach(y=>y.st='rejected');save();m.remove();toast('تم توثيق التسليم');r()}}
+init();
+</script>
+</body>
+</html>
